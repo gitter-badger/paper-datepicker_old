@@ -24,8 +24,10 @@
     "tests"
   ],
   "dependencies": {
-    "paper-input": "Polymer/paper-input#~0.5.1",
+    "paper-button": "Polymer/paper-button#~0.5.1",
     "paper-dialog": "Polymer/paper-dialog#~0.5.1",
-    "moment": "~2.8.4"
+    "moment": "~2.8.4",
+    "core-toolbar": "Polymer/core-toolbar#~0.5.1",
+    "paper-icon-button": "Polymer/paper-icon-button#~0.5.1"
   }
 }
