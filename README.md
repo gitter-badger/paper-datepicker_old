@@ -3,7 +3,7 @@
 
 [google.com/design/spec/components/pickers.html](http://www.google.com/design/spec/components/pickers.html)
 
-This is an extension of the Custom Component (Paper Calendar)[https://github.com/Wenqer/paper-calendar/blob/master/paper-calendar.html] by (Wenqer)[https://github.com/Wenqer] using (Moment.js)[https://github.com/moment/moment/]
+This is an extension of the Custom Component [Paper Calendar][https://github.com/Wenqer/paper-calendar/blob/master/paper-calendar.html] by [Wenqer][https://github.com/Wenqer] using (Moment.js](https://github.com/moment/moment)
 
 ###Paper Input
 
