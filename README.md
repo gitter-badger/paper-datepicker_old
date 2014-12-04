@@ -1,4 +1,10 @@
 paper-datepicker
 ================
 
-A text input à la Material Design
+A date input à la Material Design
+Baced on  
+https://github.com/Polymer/paper-input
+
+making http://www.google.com/design/spec/components/pickers.html
+
+
