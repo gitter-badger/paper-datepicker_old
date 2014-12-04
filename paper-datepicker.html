@@ -2,78 +2,76 @@
     <link rel="import" href="bower_components/font-roboto/roboto.html">
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+
   <polymer-element name="paper-datepicker">
-  <template>
+
+<template>
     <style>
-:host {
-  display: block;
-  max-width: 200px;
-}
-.field {
-  position: relative;
-}
-#date-input {
-  padding: 6px;
-}
-.calendar-head {
-  background: #4285f4;
-  color: #fff;
-}
-#content {
-  margin-bottom: 10px;
-}
-.header {
-  text-align: center;
-}
-.days {
-  width: 40px;
-}
-.days.fade {
-  color: #c9c9c9;
-}
-.months {
-  width: 100px;
-}
+        :host {
+          display: block;
+          max-width: 200px;
+        }
+        .field {
+          position: relative;
+        }
+        #date-input {
+          padding: 6px;
+        }
+        .calendar-head {
+          background: #4285f4;
+          color: #fff;
+        }
+        #content {
+          margin-bottom: 10px;
+        }
+        .header {
+          text-align: center;
+        }
+        .days {
+          width: 40px;
+        }
+        .days.fade {
+          color: #c9c9c9;
+        }
+        .months {
+          width: 100px;
+        }
 
-.years {
-  width: 60px;
-}
-.days.core-selected,
-.months.core-selected,
-.years.core-selected {
-  background-color: #c9c9c9;
-}
+        .years {
+          width: 60px;
+        }
+        .days.core-selected,
+        .months.core-selected,
+        .years.core-selected {
+          background-color: #c9c9c9;
+        }
 
-paper-button.colored {
-  color: #4285f4;
-  fill: #4285f4;
-}
-
-paper-button[simpleButton].colored {
-  background: #4285f4;
-  color: #fff;
-}
     </style>
 
-  <core-field class="field">
-  <paper-button value="{{ date }}" flex>
-  <paper-action-dialog backdrop="" autoclosedisabled="" role="dialog" tabindex="-1" style="position: fixed; outline: none; display: none;">
-  <core-icon icon="event" on-click="{{ toggleInput }}"></core-icon>
-    <core-toolbar class="calendar-head">
-      <paper-icon-button icon="arrow-back" on-click="{{ prev }}"></paper-icon-button>
-      <paper-button flex class="header" label="{{ header }}" on-click="{{ nextView }}"></paper-button>
-      <paper-icon-button icon="arrow-forward" on-click="{{ next }}"></paper-icon-button>
-    </core-toolbar>
-    <core-selector valueattr="data-value" selected="{{ item }}" target="{{$.content}}" itemsSelector=".active"></core-selector>
-    <div id="content" horizontal layout wrap justified>
-      <template id="days" repeat="{{ item in items }}">
-      <paper-button class="{{ type }} {{ item.cl }}" label="{{ item.label }}" data-value="{{ item.val }}" on-click="{{ setItem }}"></paper-button>
-      </template>
-    </div>
-  </core-field>
-        <paper-button role="button" tabindex="0">OK</paper-button>
+
+  <paper-button flex>{{date}} <core-icon icon="event" on-click="{{ toggleInput }}"></core-icon>
+
+      <paper-action-dialog backdrop="" autoclosedisabled="" role="dialog" tabindex="-1" style="position: fixed; outline: none; display: none;">
+
+        <core-toolbar class="calendar-head">
+          <paper-icon-button icon="arrow-back" on-click="{{ prev }}"></paper-icon-button>
+          <paper-button flex class="header" label="{{ header }}" on-click="{{ nextView }}"></paper-button>
+          <paper-icon-button icon="arrow-forward" on-click="{{ next }}"></paper-icon-button>
+        </core-toolbar>
+
+        <core-selector valueattr="data-value" selected="{{ item }}" target="{{$.content}}" itemsSelector=".active"></core-selector>
+
+        <div id="content" horizontal layout wrap justified>
+            <template id="days" repeat="{{ item in items }}">
+              <paper-button class="{{ type }} {{ item.cl }}" label="{{ item.label }}" data-value="{{ item.val }}" on-click="{{ setItem }}"></paper-button>
+            </template>
+        </div>
+
+        <paper-button role="button">CANCEL</paper-button>
+        <paper-button role="button">OK</paper-button>
+
       </paper-action-dialog>
-</paper-button>
+    </paper-button>
   </template>
   <script>
  Polymer({
