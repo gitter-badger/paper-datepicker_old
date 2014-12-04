@@ -1,9 +1,9 @@
 #Paper Datepicker
 *Date Picker based on Material Design and the design spec*
 
-http://www.google.com/design/spec/components/pickers.html
+[google.com/design/spec/components/pickers.html](http://www.google.com/design/spec/components/pickers.html)
 
-This is an extension of the component Paper Input with the Paper Full Screen dialog
+This is an extension of the Custom Component [Paper Calendar][https://github.com/Wenqer/paper-calendar/blob/master/paper-calendar.html] by [Wenqer][https://github.com/Wenqer] using (Moment.js](https://github.com/moment/moment)
 
 ###Paper Input
 
