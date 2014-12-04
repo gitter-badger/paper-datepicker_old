@@ -1,0 +1,30 @@
+{
+  "name": "paper-datepicker",
+  "version": "0.0.0",
+  "homepage": "https://github.com/HackITtoday/paper-datepicker",
+  "authors": [
+    "marcus hitchins <marcus7777@gmail.com>"
+  ],
+  "description": "A date input à la Material Design Baced on",
+  "main": "paper-datepicker.html",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "paper",
+    "datepicker",
+    "input"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-input": "Polymer/paper-input#~0.5.1",
+    "paper-dialog": "Polymer/paper-dialog#~0.5.1"
+  }
+}
