@@ -49,7 +49,7 @@
     </style>
 
 
-  <paper-button flex>{{date}} <core-icon icon="event" on-click="{{ toggleInput }}"></core-icon>
+  <paper-button flex>{{date}}
 
       <paper-action-dialog backdrop="" autoclosedisabled="" role="dialog" tabindex="-1" style="position: fixed; outline: none; display: none;">
 
@@ -72,6 +72,7 @@
 
       </paper-action-dialog>
     </paper-button>
+    <core-icon icon="event" on-click="{{ toggleInput }}"></core-icon>
   </template>
   <script>
  Polymer({
