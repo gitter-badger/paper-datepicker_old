@@ -1,19 +1,7 @@
-<!DOCTYPE html>
 
-<html>
-  <head>
-    <title>paper-datepicker</title>
-
-    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-
-    <link rel="import" href="bower_components/core-icons/core-icons.html">
     <link rel="import" href="bower_components/font-roboto/roboto.html">
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-  </head>
-
-  <body unresolved>
-
   <polymer-element name="paper-datepicker">
   <template>
     <style>
@@ -68,9 +56,9 @@ paper-button[simpleButton].colored {
     </style>
 
   <core-field class="field">
-  <paper-input floatingLabel label="Set date" value="{{ date }}" flex></paper-input>
+  <paper-button value="{{ date }}" flex>
   <paper-action-dialog backdrop="" autoclosedisabled="" role="dialog" tabindex="-1" style="position: fixed; outline: none; display: none;">
-  <core-icon icon="apps" on-click="{{ toggleInput }}"></core-icon>
+  <core-icon icon="event" on-click="{{ toggleInput }}"></core-icon>
     <core-toolbar class="calendar-head">
       <paper-icon-button icon="arrow-back" on-click="{{ prev }}"></paper-icon-button>
       <paper-button flex class="header" label="{{ header }}" on-click="{{ nextView }}"></paper-button>
@@ -83,19 +71,14 @@ paper-button[simpleButton].colored {
       </template>
     </div>
   </core-field>
-        <paper-button affirmative="" autofocus="" role="button" tabindex="0">OK</paper-button>
+        <paper-button role="button" tabindex="0">OK</paper-button>
       </paper-action-dialog>
+</paper-button>
   </template>
   <script>
  Polymer({
   publish: {
-    /**
-       * The `format` attribute details http://momentjs.com/docs/#/parsing/string-format/.
-       *
-       * @attribute format
-       * @type string
-       */
-    format: 'DD/MM/YYYY',
+    locale:"en-gb",
     date: null
   },
   created: function() {
@@ -268,5 +251,3 @@ paper-button[simpleButton].colored {
 }); 
   </script>
   </polymer-element>
-  </body>
-</html>
