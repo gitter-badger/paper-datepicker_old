@@ -48,31 +48,33 @@
 
     </style>
 
+    <section on-tap="{{ toggleDatePicker}}">
+      <paper-button flex>{{date}}
 
-  <paper-button flex>{{date}}
+          <paper-action-dialog backdrop="" autoclosedisabled="" role="dialog" tabindex="-1" style="position: fixed; outline: none; display: none;">
 
-      <paper-action-dialog backdrop="" autoclosedisabled="" role="dialog" tabindex="-1" style="position: fixed; outline: none; display: none;">
+            <core-toolbar class="calendar-head">
+              <paper-icon-button icon="arrow-back" on-click="{{ prev }}"></paper-icon-button>
+              <paper-button flex class="header" label="{{ header }}" on-click="{{ nextView }}"></paper-button>
+              <paper-icon-button icon="arrow-forward" on-click="{{ next }}"></paper-icon-button>
+            </core-toolbar>
 
-        <core-toolbar class="calendar-head">
-          <paper-icon-button icon="arrow-back" on-click="{{ prev }}"></paper-icon-button>
-          <paper-button flex class="header" label="{{ header }}" on-click="{{ nextView }}"></paper-button>
-          <paper-icon-button icon="arrow-forward" on-click="{{ next }}"></paper-icon-button>
-        </core-toolbar>
+            <core-selector valueattr="data-value" selected="{{ item }}" target="{{$.content}}" itemsSelector=".active"></core-selector>
 
-        <core-selector valueattr="data-value" selected="{{ item }}" target="{{$.content}}" itemsSelector=".active"></core-selector>
+            <div id="content" horizontal layout wrap justified>
+                <template id="days" repeat="{{ item in items }}">
+                  <paper-button class="{{ type }} {{ item.cl }}" label="{{ item.label }}" data-value="{{ item.val }}" on-click="{{ setItem }}"></paper-button>
+                </template>
+            </div>
 
-        <div id="content" horizontal layout wrap justified>
-            <template id="days" repeat="{{ item in items }}">
-              <paper-button class="{{ type }} {{ item.cl }}" label="{{ item.label }}" data-value="{{ item.val }}" on-click="{{ setItem }}"></paper-button>
-            </template>
-        </div>
+            <paper-button role="button">CANCEL</paper-button>
+            <paper-button role="button">OK</paper-button>
 
-        <paper-button role="button">CANCEL</paper-button>
-        <paper-button role="button">OK</paper-button>
+          </paper-action-dialog>
+        </paper-button>
+        <core-icon icon="event" on-click="{{ toggleInput }}"></core-icon>
+    </section>
 
-      </paper-action-dialog>
-    </paper-button>
-    <core-icon icon="event" on-click="{{ toggleInput }}"></core-icon>
   </template>
   <script>
  Polymer({
