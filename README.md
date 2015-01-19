@@ -1,4 +1,6 @@
 #Paper Datepicker
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HackITtoday/paper-datepicker_old?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 *Date Picker based on Material Design and the design spec*
 
 This to be used as a Full Screen dialogue on a Desktop as well as Mobile
